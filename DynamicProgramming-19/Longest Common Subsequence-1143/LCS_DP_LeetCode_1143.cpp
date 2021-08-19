@@ -34,9 +34,14 @@ public:
         {
             for(int j = 1 ; j < m+1 ; j++)
             {
+		// as we started to ensure not to hit out of bounds with 1st row and 1st column
+		// however we need to fill the 0th row and 0th column and iterate for last element
+		// check from start 0th position for both the strings
                 if(text1[i-1] == text2[j-1])
+		   // if match then add 1 + dp[0][0] element onwards
                     dp[i][j]=1+dp[i-1][j-1];
                 else
+		   // if no match then get max (dp[1][0], dp[0][1] element onwards
                     dp[i][j]=max(dp[i][j-1], dp[i-1][j]);
             }
         }
@@ -44,3 +49,11 @@ public:
         return dp[n][m];
        }
 };
+	J=	a	b	c	d	\0
+	I below	0	1	2	3	4
+B	0	0	0/ 1+ 0	0	0	0
+d	1	0	Dp[1][1] = 			
+\0	2	0				
+
+
+
