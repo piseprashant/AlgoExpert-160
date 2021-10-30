@@ -1,3 +1,6 @@
+// Union by rank and join by path compression Understanding https://www.youtube.com/watch?v=kaBX2s3pYO4&t=391s
+// Use union and find in actual pb https://www.youtube.com/watch?v=Kn-nw7VbWak
+
 class UnionFind {
 private:
     vector<int> parents_;
