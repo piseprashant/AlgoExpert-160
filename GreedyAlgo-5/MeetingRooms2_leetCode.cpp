@@ -1,3 +1,4 @@
+// https://www.youtube.com/watch?v=IIU646w5rZI
 class Solution {
 public:
     int minMeetingRooms(vector<Interval>& intervals) {
