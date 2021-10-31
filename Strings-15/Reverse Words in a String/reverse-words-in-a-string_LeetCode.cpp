@@ -6,6 +6,8 @@ public:
     while (str.size()) {
         int index = str.find(token);
         if (index != string::npos) {
+            // check extra if for did we find an empty chars word then we skip and continue
+            // and not put emptys in result vector
             if (str.substr(0, index).compare("") == 0 )
             {
                 str = str.substr(index + token.size());
