@@ -39,9 +39,11 @@ public:
 		// check from start 0th position for both the strings
                 if(text1[i-1] == text2[j-1])
 		   // if match then add 1 + dp[0][0] element onwards
+			// [i-1][j-1] take diagonal value
                     dp[i][j]=1+dp[i-1][j-1];
                 else
 		   // if no match then get max (dp[1][0], dp[0][1] element onwards
+			// (dp[i][j-1] take left value or dp[i-1][j] take up value 
                     dp[i][j]=max(dp[i][j-1], dp[i-1][j]);
             }
         }
