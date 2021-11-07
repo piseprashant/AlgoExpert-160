@@ -37,10 +37,10 @@ public:
 	// there are 3 case
 	// case 1 when both left and right have some values then see if leaf values return true for both left and right
         if (root != nullptr && subRoot != nullptr ) {
-           bool a = match(root->left, subRoot->left);
-           bool b = match(root->right, subRoot->right);
+           bool a = match(root->left, subRoot->left);	// 1
+           bool b = match(root->right, subRoot->right); // 2
             
-            if ((root->val == subRoot->val) && a && b)
+            if ((root->val == subRoot->val) && a && b) // a (1) - true b (2)= true then root check 4 true
                 return true;
             else
                 return false;
